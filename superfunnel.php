@@ -14,16 +14,22 @@ if (!defined('ABSPATH')) {
 }
 
 
-require_once __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
+$checkerPath = __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
 
-$updateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
-    'https://github.com/matthwize/superfunnel/',
-    __FILE__,
-    'superfunnel'
-);
+if (file_exists($checkerPath)) {
+    require_once $checkerPath;
 
-if (defined('SUPERFUNNEL_TOKEN') && SUPERFUNNEL_TOKEN) {
-    $updateChecker->setAuthentication(SUPERFUNNEL_TOKEN);
+    if (class_exists('\YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+        $updateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+            'https://github.com/matthwize/superfunnel/',
+            __FILE__,
+            'superfunnel'
+        );
+
+        if (defined('SUPERFUNNEL_TOKEN') && SUPERFUNNEL_TOKEN) {
+            $updateChecker->setAuthentication(SUPERFUNNEL_TOKEN);
+        }
+    }
 }
 
 define('SUPERFUNNEL_VERSION', '4.1.0');
