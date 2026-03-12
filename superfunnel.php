@@ -14,6 +14,10 @@ if (!defined('ABSPATH')) {
 }
 
 
+<<<<<<< HEAD
+=======
+// --- GitHub updater (failsafe) ---
+>>>>>>> 589cc91b89c52104c975630c9573ed71f43ef854
 $checkerPath = __DIR__ . '/plugin-update-checker/plugin-update-checker.php';
 
 if (file_exists($checkerPath)) {
