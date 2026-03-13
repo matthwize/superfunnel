@@ -6,7 +6,7 @@
  * Version: 4.2.2
  * Author: Matthias
  * Requires at least: 6.0
- * Requires PHP: 7.4
+ * Requires PHP: 7.4 
  */
 
 if (!defined('ABSPATH')) {
