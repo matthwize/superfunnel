@@ -3,7 +3,7 @@
  * Plugin Name: Superfunnel
  * Plugin URI: https://example.com
  * Description: Lågvikts funnel-plugin med sessions, kvalificerade besök, dropoff och adminöversikt. Integrerar Meta/Google för ROAS/POAS.
- * Version: 4.2.4
+ * Version: 4.3.7
  * Author: Matthias
  * Requires at least: 6.0
  * Requires PHP: 7.4 
@@ -36,7 +36,7 @@ if (file_exists($checkerPath)) {
     }
 }
 
-define('SUPERFUNNEL_VERSION', '4.2.4');
+define('SUPERFUNNEL_VERSION', '4.3.7');
 define('SUPERFUNNEL_PLUGIN_FILE', __FILE__);
 define('SUPERFUNNEL_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('SUPERFUNNEL_PLUGIN_URL', plugin_dir_url(__FILE__));
